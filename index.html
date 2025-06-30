@@ -3,18 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-    </style>
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>This is my first custom website.</p>
-    <p>Feel free to explore and connect!</p>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Your Name</span><br>From Your Location</h1>
+            </div>
+        </div>
+    </header>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="user">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, justo ac efficitur lacinia, quam nisi tincidunt eros, et tincidunt sem nisi eu dui. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
+                            <li><span>2019 - 2021</span><br>Team lead at StarApp LLC.</li>
+                            <li><span>2017 - 2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                            <li><span>2016 - 2017</span><br>Internship at ekart eCommerce.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
+                            <li><span>2016</span><br>MBA from MIT Bangalore.</li>
+                            <li><span>2014</span><br>BBA from ISM Bangalore.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="education">
+        <div class="container">
+            <h1 class="sub-title">My Education</h1>
+            <div class="education-list">
+                <div>
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>Degree Name</h2>
+                    <p>University Name | Year</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>Degree Name</h2>
+                    <p>University Name | Year</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="images/work-1.png" alt="work1">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/work-2.png" alt="work2">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/work-3.png" alt="work3">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <div id="experience">
+        <div class="container">
+            <h1 class="sub-title">My Experience</h1>
+            <div class="experience-list">
+                <div>
+                    <i class="fas fa-briefcase"></i>
+                    <h2>Job Title</h2>
+                    <p>Company Name | Year</p>
+                    <a href="#">Learn more</a>
+                </div>
+                 <div>
+                    <i class="fas fa-briefcase"></i>
+                    <h2>Job Title</h2>
+                    <p>Company Name | Year</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skill">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skill-list">
+                <div>
+                    <h2>Skill Name</h2>
+                    <p>Description of the skill.</p>
+                </div>
+                <div>
+                    <h2>Skill Name</h2>
+                    <p>Description of the skill.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="awards">
+        <div class="container">
+            <h1 class="sub-title">My Awards</h1>
+            <div class="awards-list">
+                <div>
+                    <i class="fas fa-award"></i>
+                    <h2>Award Name</h2>
+                    <p>Awarding Body | Year</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-award"></i>
+                    <h2>Award Name</h2>
+                    <p>Awarding Body | Year</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> contact@example.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 0123456789</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Your Name. Made with <i class="fas fa-heart"></i> by Easy Tutorials</p>
+        </div>
+    </div>
+
+<script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
