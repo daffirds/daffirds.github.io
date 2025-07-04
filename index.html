@@ -3,216 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Daffa Firdaus - Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo" alt="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#project">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
+
+    <!-- ============================================= -->
+    <!-- LOADING SCREEN -->
+    <!-- ============================================= -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- FLOATING LEFT NAVIGATION -->
+    <!-- ============================================= -->
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#home" class="nav-link active" title="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="#about" class="nav-link" title="About"><i class="fas fa-user"></i></a></li>
+            <li><a href="#skills" class="nav-link" title="Skills"><i class="fas fa-cogs"></i></a></li>
+            <li><a href="#projects" class="nav-link" title="Projects"><i class="fas fa-laptop-code"></i></a></li>
+            <li><a href="#experience" class="nav-link" title="Experience"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="#awards" class="nav-link" title="Awards"><i class="fas fa-award"></i></a></li>
+            <li><a href="#contact" class="nav-link" title="Contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- ============================================= -->
+    <!-- MAIN CONTENT WRAPPER -->
+    <!-- ============================================= -->
+    <main class="content-wrapper">
+
+        <!-- ============================================= -->
+        <!-- HOME SECTION -->
+        <!-- ============================================= -->
+        <section id="home" class="section">
+            <div class="home-container">
+                <div class="home-left">
+                    <div class="photo-container">
+                        <img src="assets/images/user.png" alt="Your Name" class="home-photo">
+                    </div>
+                </div>
+                <div class="home-right">
+                    <h1 class="main-name">Daffa Firdaus</h1>
+                    <p class="current-position">Mathematics Fresh Graduate || AI Enthusiast</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/daffirds" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/daffirds" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:daffirds@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/628888036903" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- ABOUT SECTION -->
+        <!-- ============================================= -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-bio">
+                <p>
+                    A recent (June 2025) <strong>Mathematics graduate</strong> from <strong>IPB University</strong>. During my time at IPB, I was awarded an <strong>Honorable Mention</strong> in a national-level mathematics competition (ONMIPA-PT 2024). <br><br>I have hands-on project experience, both solo and in teams, performing <strong>data analysis</strong>, creating <strong>data visualizations</strong>, developing <strong>ML-based recommendation system</strong>, and implementing <strong>AI image classification</strong>. These projects have equipped me with proficiency in tools/libraries such as <strong>Python, SQL, Power BI, R, Julia, Excel, Numpy, Pandas, TensorFlow, OpenCV,</strong> and <strong>Matplotlib</strong>. <br><br>I am eager to apply my skills in <strong>data analysis, ML, deep learning, NLP, CNN, LLM,</strong> and <strong>data visualization</strong> to solve complex problems and uncover predictive insights from data.</p>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- SKILLS SECTION -->
+        <!-- ============================================= -->
+        <section id="skills" class="section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-layout">
+                <div class="skill-group languages">
+                    <h3>Languages</h3>
+                    <img src="assets/images/languages-logo.png" alt="Language Skills" class="skill-group-image-1">
+                </div>
+                <div class="skill-group libraries">
+                    <h3>Libraries</h3>
+                    <img src="assets/images/libraries-logo.png" alt="Library Skills" class="skill-group-image-1">
+                </div>
+            </div>
+            <div class="skill-group tools">
+                    <h3>Tools</h3>
+                    <img src="assets/images/tools-logo.png" alt="Tool Skills" class="skill-group-image-2">
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- PROJECTS SECTION -->
+        <!-- ============================================= -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Project</h2>
+            <!--<div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon" style="background-color: #ffe8d6;">
+                        <i class="fas fa-dna" style="color: #ff8c42;"></i>
+                    </div>
+                    <h3>AI in Biotechnology</h3>
+                    <p>An AI-based framework and data-driven methodology for post-PCR High-Resolution Melting Analysis (HRMA).</p>
+                    <a href="#" class="project-link">
+                        <i class="fas fa-rocket"></i> Learn More
+                    </a>
+                </div>-->
+            <div class="project-container">
+                <div class="project-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="project-description">
+                    <h3>Personalized Menu Recommendation System for Solaria</h3>
+                    <ul>
+                        <li>Developed a machine learning model using SVD to build a personalized menu recommendation system for Solaria based on customer ratings.</li>
+                        <li>Executed the end-to-end data science workflow using Julia, from primary data collection and preparation to modelling and evaluating performance.</li>
+                        <li>Interpret model outputs to provide actionable business insights on customer preference trends, enabling data-driven strategic decisions for the company.</li>
+                    </ul>
+                    <a href="https://journal.unesa.ac.id/index.php/jram/article/view/38789" class="project-link">
+                        <i class="fas fa-newspaper"></i> Publication
+                    </a>
+                </div>
+            </div>
+                <!--<div class="project-card">
+                    <div class="project-icon" style="background-color: #e3f2fd;">
+                        <i class="fas fa-hashtag" style="color: #29b6f6;"></i>
+                    </div>
+                    <h3>Image to hashtags</h3>
+                    <p>An AI tool that generates trending hashtags for images based on their content, using pre-trained models.</p>
+                    <a href="#" class="project-link">
+                        <i class="fas fa-arrow-right"></i> Try it
+                    </a>
+                </div>-->
+            </div>
+        </section>
+
+        <!-- HIGHLIGHTS SECTION
+        <section id="highlight" class="section">
+            <h2 class="section-title">Highlights</h2>
+            <div class="highlight-slider-wrapper">
+                <div class="highlight-slider">
+                    <ul class="highlight-track">
+                        <li class="highlight-slide current-slide">
+                            <img src="https://placehold.co/900x500/EFEFEF/333?text=Highlight+1" alt="Highlight 1">
+                        </li>
+                        <li class="highlight-slide">
+                            <img src="https://placehold.co/900x500/DDEFEF/333?text=Highlight+2" alt="Highlight 2">
+                        </li>
+                    </ul>
+                </div>
+                <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots"></div>
+            </div>
+        </section>
+        -->
+    
+        <!-- ============================================= -->
+        <!-- EXPERIENCE SECTION -->
+        <!-- ============================================= -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <h3>Mathematics Tutor</h3>
+                <p class="experience-details">Gugus Mahasiswa Matematika IPB | May 2024 - Oct 2024</p>
+                <ul>
+                    <li>Tutored fellow mathematics students on math subjects.</li>
+                    <li>Subjects tutored: Real Analysis and Cryptographic Mathematics.</li>
                 </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Web Developer</p>
-                <h1>Hi, I'm <span>Your Name</span><br>From Your Location</h1>
             </div>
-        </div>
-    </header>
+            <div class="experience-item">
+                <h3>Staff of Broadcasting, Event, and Service Division</h3>
+                <p class="experience-details">Serambi Ruhiyah Mahasiswa G IPB | Dec 2022 - Dec 2023</p>
+                <ul>
+                    <li>Organized and executed faculty-level seminar events.</li>
+                    <li>Analyzed and visualized survey data to identify key areas for improvement and demonstrate program impact.</li>
+                </ul>
+            </div>
+        </section>
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png" alt="user">
+        <!-- ============================================= -->
+        <!-- AWARDS SECTION -->
+        <!-- ============================================= -->
+        <section id="awards" class="section">
+            <h2 class="section-title">Competition</h2>
+            <div class="award-container">
+                <div class="award-image">
+                    <img src="assets/images/onmipa.jpg" alt="Award Image">
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, justo ac efficitur lacinia, quam nisi tincidunt eros, et tincidunt sem nisi eu dui. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>App Development</span><br>Building Android/iOS apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
-                            <li><span>2019 - 2021</span><br>Team lead at StarApp LLC.</li>
-                            <li><span>2017 - 2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
-                            <li><span>2016 - 2017</span><br>Internship at ekart eCommerce.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
-                            <li><span>2016</span><br>MBA from MIT Bangalore.</li>
-                            <li><span>2014</span><br>BBA from ISM Bangalore.</li>
-                        </ul>
-                    </div>
+                <div class="award-description">
+                    <h3>Honorable Mention in Mathematics at ONMIPA-PT 2024</h3>
+                    <p>Awarded an Honorable Mention (top 20) in Mathematics at ONMIPA-PT 2024 (National Mathematics and Natural Sciences Olympiad for Higher Education), competing against 1,000+ participants nationwide, issued by Kemdikbudristek, Puspresnas, and BPTI.</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div id="education">
-        <div class="container">
-            <h1 class="sub-title">My Education</h1>
-            <div class="education-list">
-                <div>
-                    <i class="fas fa-graduation-cap"></i>
-                    <h2>Degree Name</h2>
-                    <p>University Name | Year</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fas fa-graduation-cap"></i>
-                    <h2>Degree Name</h2>
-                    <p>University Name | Year</p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="project">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-            <div class="project-list">
-                <div class="project">
-                    <img src="images/work-1.png" alt="work1">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app connects you to the talented people around the world. Download it from play store.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        <!-- ============================================= -->
+        <!-- CONTACT SECTION -->
+        <!-- ============================================= -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <div class="contact-details">
+                        <h4>Linkedin:</h4>
+                        <p><a href="https://www.linkedin.com/in/daffirds" target="_blank">www.linkedin.com/in/daffirds</a></p>
                     </div>
                 </div>
-                <div class="project">
-                    <img src="images/work-2.png" alt="work2">
-                    <div class="layer">
-                        <h3>Music App</h3>
-                        <p>The app connects you to the talented people around the world. Download it from play store.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div class="contact-details">
+                        <h4>Github:</h4>
+                        <p><a href="https://github.com/daffirds" target="_blank">github.com/daffirds</a></p>
                     </div>
                 </div>
-                <div class="project">
-                    <img src="images/work-3.png" alt="work3">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>The app connects you to the talented people around the world. Download it from play store.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <h4>Email:</h4>
+                        <p><a href="mailto:daffirds@gmail.com">daffirds@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-details">
+                        <h4>WhatsApp:</h4>
+                        <p><a href="https://wa.me/628888036903">+62 888 8036 903</a></p>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
-        </div>
-    </div>
+            <p class="resume-subtitle">Download my Resume here</p>
+            <a href="assets/DaffaFirdaus-CV.pdf" download class="btn-download">
+                <i class="fas fa-download"></i> Resume
+            </a>
+        </section>
 
-    <div id="experience">
-        <div class="container">
-            <h1 class="sub-title">My Experience</h1>
-            <div class="experience-list">
-                <div>
-                    <i class="fas fa-briefcase"></i>
-                    <h2>Job Title</h2>
-                    <p>Company Name | Year</p>
-                    <a href="#">Learn more</a>
-                </div>
-                 <div>
-                    <i class="fas fa-briefcase"></i>
-                    <h2>Job Title</h2>
-                    <p>Company Name | Year</p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
+    
+    <!-- ============================================= -->
+    <!-- FOOTER -->
+    <!-- ============================================= -->
+    <footer class="site-footer">
+        <p>© Copyright <span class="footer-name">Daffa Firdaus</span>. All Rights Reserved</p>
+    </footer>
 
-    <div id="skill">
-        <div class="container">
-            <h1 class="sub-title">My Skills</h1>
-            <div class="skill-list">
-                <div>
-                    <h2>Skill Name</h2>
-                    <p>Description of the skill.</p>
-                </div>
-                <div>
-                    <h2>Skill Name</h2>
-                    <p>Description of the skill.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- ============================================= -->
+    <!-- SCROLL TO TOP BUTTON -->
+    <!-- ============================================= -->
+    <a href="#home" id="scroll-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
 
-    <div id="awards">
-        <div class="container">
-            <h1 class="sub-title">My Awards</h1>
-            <div class="awards-list">
-                <div>
-                    <i class="fas fa-award"></i>
-                    <h2>Award Name</h2>
-                    <p>Awarding Body | Year</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fas fa-award"></i>
-                    <h2>Award Name</h2>
-                    <p>Awarding Body | Year</p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Local JS -->
+    <script src="assets/js/script.js"></script>
 
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i> contact@example.com</p>
-                    <p><i class="fas fa-phone-square-alt"></i> 0123456789</p>
-                    <div class="social-icons">
-                        <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-twitter-square"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright © Your Name. Made with <i class="fas fa-heart"></i> by Easy Tutorials</p>
-        </div>
-    </div>
-
-<script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
 </body>
 </html>
