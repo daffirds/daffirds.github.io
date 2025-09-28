@@ -1,2 +1,2 @@
 See my portfolio here:
-https://daffirds.github.io
+https://daffirds.github.io/portfolio

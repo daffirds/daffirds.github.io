@@ -77,48 +77,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
     const homeSection = document.getElementById('home');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+    window.addEventListener('scroll', () => {
+    let current = '';
 
-            if (targetSection) {
-                let topPos = targetSection.offsetTop;
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
 
-                if (!targetSection.classList.contains('visible') && targetId !== '#home') {
-                    topPos -= 40;
-                }
-                
-                window.scrollTo({
-                    top: topPos,
-                    behavior: 'smooth'
-                });
-            }
-        });
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute('id');
+        }
     });
-    
-    const navObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                
-                let targetId = entry.target.id;
-                
-                // If the current section is 'highlight', activate the 'projects' link
-                if (targetId === 'highlight') {
-                    targetId = 'projects';
-                }
 
-                const correspondingLink = document.querySelector(`.nav-link[href="#${targetId}"]`);
-                if (correspondingLink) {
-                    correspondingLink.classList.add('active');
-                }
-            }
-        });
-    }, { threshold: 0.5 });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+        }
+    });
+    });
 
-    sections.forEach(section => navObserver.observe(section));
 
     // SCROLL TO TOP BUTTON VISIBILITY
     const scrollTopObserver = new IntersectionObserver((entries) => {
@@ -288,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize sliders for all modals that might have one
+    // Initialize sliders 
     document.querySelectorAll('.modal-overlay').forEach(modal => {
         initializeSlider(modal);
     });
