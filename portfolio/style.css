@@ -1228,7 +1228,7 @@ body.modal-open {
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #007BFF 0%, #00C6FF 60%, #6A82FB 100%);
-        clip-path: circle(600px at 50% -50%);
+        clip-path: circle(500px at 50% -50%);
         overflow: hidden;
         z-index: -2;
     }
@@ -1265,6 +1265,7 @@ body.modal-open {
     }
 
     #home {
+        min-height: 0;
         padding-top: 60px;
         padding-bottom: 60px;
     }
@@ -1272,7 +1273,9 @@ body.modal-open {
     .home-container {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
+
     .home-left, .home-right {
         flex-basis: 100%;
         margin: 0;
