@@ -160,10 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
             visibleModal.classList.remove('visible');
         }
         document.body.classList.remove('modal-open');
-        const video = modalToOpen.querySelector("video");
-            if (video) {
-                video.pause();
-            }
+        const video = visibleModal.querySelector("video");
+        if (video) {
+            video.pause();
+        }
+        if (history.state && history.state.modalOpen) {
+            history.back();
+        }
     };
 
     openModalButtons.forEach(button => {
@@ -174,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modalToOpen) {
                 modalToOpen.classList.add('visible');
                 document.body.classList.add('modal-open');
+                history.pushState({ modalOpen: true }, '');
                 
                 // Reset scroll to top when opening
                 const modalContent = modalToOpen.querySelector('.modal');
@@ -203,6 +207,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    window.addEventListener("popstate", (event) => {
+        if (event.state && event.state.modalOpen) {
             closeModal();
         }
     });
