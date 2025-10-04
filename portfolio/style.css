@@ -1118,17 +1118,9 @@ body.modal-open {
 /* RESPONSIVE DESIGN */
 /* ============================================= */
 @media (max-width: 992px) {
-    /*body::before {
-        clip-path: circle(75% at -15% 50%); /* Pull the circle further left 
-    }*/
     .overlay-1 {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        background: linear-gradient(135deg, #007BFF 0%, #00C6FF 60%, #6A82FB 100%);
         clip-path: circle(420px at -15% 50%);
-        z-index: -2;
     }
 
     #home {
@@ -1168,7 +1160,7 @@ body.modal-open {
     }
 
     .modal-grid {
-    grid-template-columns: 1fr; /* One column */
+        grid-template-columns: 1fr; /* One column */
     }
 
     .project-info {
@@ -1215,22 +1207,34 @@ body.modal-open {
     }
 }
 
+@media (max-height: 444px){
+    .overlay-1 {
+        clip-path: circle(70% at 0% 50%);
+    }
+    
+    .home-left {
+        padding-left: 40px;
+    }
+}
 
-@media (max-width: 768px) {
+@media (max-height: 444px),(max-width: 992px) {
+    .overlay-1 {
+        clip-path: circle(420px at -20% 50%);
+    }
+}
+
+@media (max-height: 444px), (max-width: 768px) {
     .content-wrapper {
         padding-left: 0; /* REMOVED padding for mobile layout */
     }
 
-    /* blue shape */
-    .overlay-1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(135deg, #007BFF 0%, #00C6FF 60%, #6A82FB 100%);
-        clip-path: circle(500px at 50% -50%);
-        overflow: hidden;
-        z-index: -2;
+    .site-footer {
+        margin-left: 0;
+        margin-bottom: 65px;
+    }
+
+    #scroll-to-top-btn {
+        bottom: 95px;
     }
 
     .side-nav {
@@ -1262,6 +1266,15 @@ body.modal-open {
     .side-nav ul li a.active {
         color: white;
         background-color: var(--primary-color);
+    }
+
+}
+
+@media (max-width: 768px) {
+    /* blue shape */
+    .overlay-1 {
+        clip-path: circle(500px at 50% -50%);
+        overflow: hidden;
     }
 
     #home {
@@ -1318,15 +1331,6 @@ body.modal-open {
         gap: 40px;
         width: auto;
         padding-bottom: 20px;
-    }
-
-    .site-footer {
-        margin-left: 0;
-        margin-bottom: 65px;
-    }
-
-    #scroll-to-top-btn {
-        bottom: 95px;
     }
 
 }
