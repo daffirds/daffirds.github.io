@@ -36,8 +36,8 @@
         <ul>
             <li><a href="#home" class="nav-link active" title="Home"><i class="fas fa-home"></i></a></li>
             <li><a href="#about" class="nav-link" title="About"><i class="fas fa-user"></i></a></li>
-            <li><a href="#skills" class="nav-link" title="Skills"><i class="fas fa-cogs"></i></a></li>
             <li><a href="#projects" class="nav-link" title="Projects"><i class="fas fa-laptop-code"></i></a></li>
+            <li><a href="#skills" class="nav-link" title="Skills"><i class="fas fa-cogs"></i></a></li>
             <li><a href="#experience" class="nav-link" title="Experience"><i class="fas fa-briefcase"></i></a></li>
             <li><a href="#awards" class="nav-link" title="Awards"><i class="fas fa-award"></i></a></li>
             <li><a href="#contact" class="nav-link" title="Contact"><i class="fas fa-envelope"></i></a></li>
@@ -89,6 +89,85 @@
         </section>
 
         <!-- ============================================= -->
+        <!-- PROJECTS SECTION -->
+        <!-- ============================================= -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-icon icon-brown">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>System Logs Classification</h3>
+                    <span class="project-type">Independent Project</span>
+                    <p>A system logs classification using hybrid approach (BERT + LLM) to optimize efficiency.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">BERT</span>
+                            <span class="tech-badge">LLM</span>
+                            <span class="tech-badge">FastAPI</span>
+                    </div>
+                    <button class="project-link" data-project-id="lc">
+                        <i class="fas fa-eye"></i> See Details
+                    </button>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-icon icon-purple">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Interactive Dashboard Projects</h3>
+                    <span class="project-type">Independent Project</span>
+                    <p>A series of projects focused on visualizing complex datasets into interactive dashboards.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">DAX</span>
+                    </div>
+                    <button class="project-link" data-project-id="dv">
+                        <i class="fas fa-eye"></i> See Details
+                    </button>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-icon icon-orange">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Solaria Personalized Menu Recommendation System</h3>
+                    <span class="project-type">Team Project</span>
+                    <p>A personalized menu recommendation system for Solaria based on user ratings using machine learning.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">Julia</span>
+                            <span class="tech-badge">Jupyter Notebook</span>
+                    </div>
+                    <button class="project-link" data-project-id="rs">
+                        <i class="fas fa-eye"></i> See Details
+                    </button>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="project-card">
+                    <div class="project-icon icon-red">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Life Expectancy Regression Analysis</h3>
+                    <span class="project-type">Team Project</span>
+                    <p>A statistical analysis exploring the relationship between life expectancy and various socio-economic factors using multiple linear regression.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">R</span>
+                            <span class="tech-badge">RStudio</span>
+                            <span class="tech-badge">Excel</span>
+                    </div>
+                    <button class="project-link" data-project-id="le">
+                        <i class="fas fa-eye"></i> See Details
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
         <!-- SKILLS SECTION -->
         <!-- ============================================= -->
         <section id="skills" class="section">
@@ -106,64 +185,6 @@
             <div class="skill-group tools">
                     <h3>Tools</h3>
                     <img src="assets/images/tools-logo.png" alt="Tool Skills" class="skill-group-image-2">
-            </div>
-        </section>
-
-        <!-- ============================================= -->
-        <!-- PROJECTS SECTION -->
-        <!-- ============================================= -->
-        <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <div class="project-card">
-                    <div class="project-icon icon-red">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Life Expectancy Regression Analysis</h3>
-                    <span class="project-type">Team Project</span>
-                    <p>A statistical analysis exploring the relationship between life expectancy and various socio-economic factors using multiple linear regression.</p>
-                    <div class="tech-skills">
-                            <span class="tech-badge">R</span>
-                            <span class="tech-badge">RStudio</span>
-                            <span class="tech-badge">Excel</span>
-                    </div>
-                    <button class="project-link" data-project-id="le">
-                        <i class="fas fa-eye"></i> See Details
-                    </button>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <div class="project-icon icon-orange">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Solaria Personalized Menu Recommendation System</h3>
-                    <span class="project-type">Team Project</span>
-                    <p>A personalized menu recommendation system for Solaria based on user ratings using machine learning.</p>
-                    <div class="tech-skills">
-                            <span class="tech-badge">Julia</span>
-                            <span class="tech-badge">Jupyter Notebook</span>
-                    </div>
-                    <button class="project-link" data-project-id="rs">
-                        <i class="fas fa-eye"></i> See Details
-                    </button>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="project-card">
-                    <div class="project-icon icon-purple">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Interactive Dashboard Projects</h3>
-                    <span class="project-type">Independent Project</span>
-                    <p>A series of projects focused on visualizing complex datasets into interactive dashboards.</p>
-                    <div class="tech-skills">
-                            <span class="tech-badge">Power BI</span>
-                            <span class="tech-badge">DAX</span>
-                    </div>
-                    <button class="project-link" data-project-id="dv">
-                        <i class="fas fa-eye"></i> See Details
-                    </button>
-                </div>
             </div>
         </section>
 
@@ -288,7 +309,7 @@
     <!-- ============================================= -->
     <!-- PROJECT DETAILS MODAL -->
     <!-- ============================================= -->
-    <!-- MODAL 1: RECOMMENDATION SYSTEM -->
+    <!-- MODAL 1: ANREG -->
     <div id="le-modal" class="modal-overlay">
         <div class="modal">
             <button class="modal-close-btn" title="Close"><i class="fas fa-times"></i></button>
@@ -315,6 +336,9 @@
                     <div class="slider-visual-wrapper">
                         <div class="slider-container">
                             <div class="slide">
+                                <img src="https://raw.githubusercontent.com/daffirds/life-expectancy/main/figures/flowchart.svg" alt="Residual vs Fitted Plot">
+                            </div>
+                            <div class="slide">
                                 <img src="https://raw.githubusercontent.com/daffirds/life-expectancy/main/figures/residualvsfitted.png" alt="Residual vs Fitted Plot">
                             </div>
                             <div class="slide">
@@ -337,11 +361,11 @@
                     <br><br>In this project, I learned how to:
                 </p>
                 <ol>
-                    <li>Perform Exploratory Data Analysis (EDA) to clean, transform, and visualize datasets.</li>
-                    <li>Build, refine, and interpret multiple linear regression models with backward selection.</li>
+                    <li>Perform <strong>Exploratory Data Analysis (EDA)</strong> to clean, transform, and visualize datasets.</li>
+                    <li>Build, refine, and interpret <strong>multiple linear regression</strong> models with <strong>backward selection.</strong></li>
                     <li>Apply hypothesis testing (t-tests, F-tests) to evaluate model significance and reliability.</li>
                     <li>Diagnose and address key regression assumptions such as multicollinearity, homoskedasticity, normality of residuals, and autocorrelation.</li>
-                    <li>Use R and Excel to implement statistical modeling, run diagnostics, and create clear visualizations.</li>
+                    <li>Use <strong>R</strong> and <strong>Excel</strong> to implement statistical modeling, run diagnostics, and create clear visualizations.</li>
                 </ol>
             </div>
         </div>
@@ -377,6 +401,9 @@
                         <div class="slider-visual-wrapper">
                             <div class="slider-container">
                                 <div class="slide">
+                                    <img src="https://raw.githubusercontent.com/daffirds/solaria-menu-recommendation/main/plot/flowchart.svg" alt="Flowchart">
+                                </div>
+                                <div class="slide">
                                     <img src="https://raw.githubusercontent.com/daffirds/solaria-menu-recommendation/main/plot/mape_plot.svg" alt="Iteration Plot">
                                 </div>
                                 <div class="slide">
@@ -400,8 +427,8 @@
                     </p>
                     <ol>
                         <li>Designed and conducted a survey through Google Form to collect customer rating data.</li>
-                        <li>Preprocessed the dataset and construct a user–item matrix to represent menu preferences.</li>
-                        <li>Applied Singular Value Decomposition (SVD) for matrix factorization to fill in missing ratings and generate recommendations.</li>
+                        <li>Preprocessed the dataset and construct a user–item matrix to represent menu preferences using <strong>Julia</strong>.</li>
+                        <li>Applied <strong>Singular Value Decomposition (SVD)</strong> for matrix factorization to fill in missing ratings and generate recommendations.</li>
                         <li>Performed hyperparameter tuning to select the best number of latent factors for accurate predictions.</li>
                         <li>Evaluated recommendation model performance.</li>
                     </ol>
@@ -425,6 +452,7 @@
                         <h4>Tools Used:</h4>
                         <ul class="tools-list">
                             <li>Power BI</li>
+                            <li>SQL</li>
                             <li>DAX</li>
                         </ul>
 
@@ -459,7 +487,7 @@
                     <ol>
                         <li>
                             <strong>Walmart Sales Analysis</strong><br>
-                            An interactive Power BI dashboard analyzing Walmart sales and their relationship with key economic indicators.<br>Tools and Skills used: Power BI, DAX, EDA, data visualization, and dashboard design.
+                            An interactive Power BI dashboard analyzing Walmart sales and their relationship with key economic indicators.<br><strong>Tools and Skills used:</strong> Power BI, DAX, EDA, data visualization, and dashboard design.
                         </li>
                     </ol>
                 </div>
@@ -467,7 +495,67 @@
         </div>
     </div>
 
+    <!-- MODAL 4: LOG CLASSIFICATION -->
+    <div id="lc-modal" class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close-btn" title="Close"><i class="fas fa-times"></i></button>
+                <div class="modal-grid">
+                    <div class="project-info">
+                        <h3>System Logs Classification</h3>
+                        <span class="modal-project-type">Independent Project</span>
+                        <p class="simple-desc">
+                            A system logs classification using hybrid approach (BERT + LLM) to optimize efficiency.
+                        </p>       
+                        <h4>Tools Used:</h4>
+                        <ul class="tools-list">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Scikit-learn</li>
+                            <li>BERT</li>
+                            <li>LLM</li>
+                            <li>FastAPI</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/daffirds/log-classification" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
 
+                    <div class="image-slider">
+                        <div class="slider-visual-wrapper">
+                            <div class="slider-container">
+                                <div class="slide">
+                                    <img src="https://raw.githubusercontent.com/daffirds/log-classification/main/res/flowchart.svg" alt="Flowchart">
+                                </div>
+                                <div class="slide">
+                                    <img src="https://raw.githubusercontent.com/daffirds/log-classification/main/res/bert-accuracy.png" alt="Accuracy Table">
+                                </div>
+                            </div>
+                            <div class="slider-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+
+                <div class="detailed-explanation">
+                    <h4>Project Overview</h4>
+                    <p>
+                    This project was developed as a learning exercise to explore log classification using NLP and LLM.
+                    <br><br>Highlights:
+                    </p>
+                    <ol>
+                        <li>Used <strong>Pandas</strong> for data exploration and <strong>DBSCAN</strong> for clustering.</li>
+                        <li>Utilizes embeddings generated by <strong>BERT</strong>, followed by <strong>Logistic Regression</strong> as the classification layer and obtained <strong>99%</strong> accuracy from training.</li>
+                        <li>Used the <strong>gpt-oss-20b</strong> LLM model to label and classify log data.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Local JS -->
     <script src="script.js"></script>
 

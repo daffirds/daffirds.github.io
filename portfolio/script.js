@@ -221,7 +221,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Image Slider Functionality (for the recommendation system modal) ---
     function initializeSlider(modal) {
         const sliderContainer = modal.querySelector('.slider-container');
-        if (!sliderContainer) return; // If there's no slider, exit
+        if (!sliderContainer) return;
+
+        // The wrapper (overflow:hidden) is the element we should resize
+        const sliderWrapper = modal.querySelector('.slider-visual-wrapper') || sliderContainer.parentElement;
 
         const slides = Array.from(modal.querySelectorAll('.slide'));
         const prevBtn = modal.querySelector('.prev-btn');
@@ -231,50 +234,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const captionsMap = {
             'le-modal': [
+                "Project Flowchart",
                 "Residual vs Fitted Plot of The Best Model",
                 "QQ-Plot of The Best Model",
             ],
             'rs-modal': [
+                "Project Flowchart",
                 "Iteration Plot, showing MAPE over iterations.",
                 "Factors Accuracy"
             ],
             'dv-modal': [
                 "1. Walmart Sales Analysis Dashboard"
+            ],
+            'lc-modal': [
+                "Project Flowchart",
+                "BERT + Logistic Regression Accuracy"
             ]
         };
-
         const captions = captionsMap[modal.id] || [];
-        
-        const updateUI = (targetIndex) => {
-            // Move the slide
+
+        // Measure slide height and apply it to the wrapper
+        const measureAndSetHeight = () => {
+            const currentSlideEl = slides[currentSlide];
+            if (currentSlideEl) {
+                const media = currentSlideEl.querySelector('img, video');
+                if (media && media.complete) {
+                    sliderContainer.style.height = media.getBoundingClientRect().height + 'px';
+                } else if (media) {
+                    media.onload = () => {
+                        sliderContainer.style.height = media.getBoundingClientRect().height + 'px';
+                    };
+                }
+            }
+        };
+
+        const updateUI = (targetIndex, options = {}) => {
             const offset = -targetIndex * 100;
             sliderContainer.style.transform = `translateX(${offset}%)`;
 
-            // Update caption
-            if (caption) {
-                caption.textContent = captions[targetIndex] || '';
-            }
-
-            // Update current slide index
+            if (caption) caption.textContent = captions[targetIndex] || '';
             currentSlide = targetIndex;
+
+            if (!options.skipMeasure) {
+                measureAndSetHeight();
+            }
         };
 
-
         if (slides.length > 0) {
-            nextBtn.addEventListener('click', () => {
+            nextBtn && nextBtn.addEventListener('click', () => {
                 const nextIndex = (currentSlide + 1) % slides.length;
                 updateUI(nextIndex);
             });
 
-            prevBtn.addEventListener('click', () => {
+            prevBtn && prevBtn.addEventListener('click', () => {
                 const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
                 updateUI(prevIndex);
             });
 
-            // Initialize the slider to the first slide
-            updateUI(0);
+            // Recompute height when window resizes (keeps responsive images correct)
+            window.addEventListener('resize', () => {
+                measureAndSetHeight(slides[currentSlide]);
+            });
+
+            // Initialize: set wrapper height to the first slide's height
+            updateUI(0, { skipMeasure: true });
         }
     }
+
 
     // Initialize sliders 
     document.querySelectorAll('.modal-overlay').forEach(modal => {

@@ -495,6 +495,15 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.project-card .icon-brown {
+    background-color: #f4ede4;
+    color: #4e2a0e;
+}
+.project-card:hover .icon-brown {
+    background-color: #4e2a0e;
+    color: #f4ede4;
+}
+
 .project-card .icon-red {
     background-color: #f3e5f5;
     color: #E0245E;
@@ -969,6 +978,7 @@ body.modal-open {
 
 .slider-container {
     display: flex;
+    align-items: flex-start;
     /* This enables the smooth sliding animation */
     transition: transform 0.5s ease-in-out;
 }
@@ -982,6 +992,7 @@ body.modal-open {
 .slide img {
     width: 100%;
     height: auto;
+    max-height: 75vh;
     display: block;
     object-fit: contain; /* CHANGED: Ensures the whole image is visible */
 }
@@ -989,8 +1000,9 @@ body.modal-open {
 .slide video {
     width: 100%;
     height: auto;
+    max-height: 75vh;
     display: block;
-    object-fit: contain; /* CHANGED: Ensures the whole image is visible */
+    object-fit: contain; /* CHANGED: Ensures the whole video is visible */
 }
 
 /* Slider navigation container */
@@ -1018,6 +1030,7 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.15);
     pointer-events: auto;
 }
 
@@ -1025,11 +1038,6 @@ body.modal-open {
 .slider-nav button:hover {
     color: var(--primary-color);
     transform: scale(1.2);
-}
-
-/* Optional: add subtle shadow to make arrows visible on light backgrounds */
-.slider-nav button {
-    text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .image-caption {
@@ -1333,6 +1341,9 @@ body.modal-open {
         padding-bottom: 20px;
     }
 
+    .tools-list {
+        justify-content: center;
+    }
 }
 
 /* Float animation for social links */
