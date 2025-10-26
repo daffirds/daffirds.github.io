@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
 
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            if (pageYOffset >= sectionTop - window.innerHeight / 4) {
                 current = section.getAttribute('id');
             }
         });
@@ -122,7 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // === 3. FADE-IN SECTION ANIMATION ===
     const animationObserverOptions = {
         root: null,
-        threshold: 0.15 // Trigger when 15% of the section is visible
+        rootMargin: '-15% 0px -15% 0px', // Trigger when section is 20% into viewport
+        threshold: 0 // Use 0 threshold with rootMargin for better control
     };
 
     const animationObserver = new IntersectionObserver((entries, observer) => {
@@ -222,9 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function initializeSlider(modal) {
         const sliderContainer = modal.querySelector('.slider-container');
         if (!sliderContainer) return;
-
-        // The wrapper (overflow:hidden) is the element we should resize
-        const sliderWrapper = modal.querySelector('.slider-visual-wrapper') || sliderContainer.parentElement;
 
         const slides = Array.from(modal.querySelectorAll('.slide'));
         const prevBtn = modal.querySelector('.prev-btn');

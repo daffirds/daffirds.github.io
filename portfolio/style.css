@@ -391,6 +391,7 @@ body {
 #about {
     position: relative;
     overflow: hidden;
+    margin-top: 2rem;
 }
 
 .about-bio {
@@ -1524,11 +1525,15 @@ body.modal-open {
         color: var(--dark-grey);
         background-color: transparent;
     }
+
+    .side-nav ul li a:hover {
+        color: var(--dark-grey);
+    }
+
     .side-nav ul li a.active {
         color: white;
         background-color: var(--primary-color);
     }
-
 }
 
 @media (max-width: 768px) {
