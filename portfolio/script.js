@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // === ANIMATED TEXT FOR CURRENT POSITION (MOVED HERE) ===
         const texts = [
-            "Mathematics Fresh Graduate",
-            "Data Science Enthusiast"
+            "Data Scientist",
+            "AI Enthusiast"
         ];
 
         const wrapper = document.querySelector(".position-text-wrapper");
@@ -78,23 +78,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeSection = document.getElementById('home');
 
     window.addEventListener('scroll', () => {
-    let current = '';
+        let current = '';
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
 
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute('id');
-        }
-    });
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-        }
-    });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
     });
 
 
@@ -158,12 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const visibleModal = document.querySelector('.modal-overlay.visible');
         if (visibleModal) {
             visibleModal.classList.remove('visible');
+            const video = visibleModal.querySelector("video");
+            if (video) {
+                video.pause();
+            }
         }
         document.body.classList.remove('modal-open');
-        const video = visibleModal.querySelector("video");
-        if (video) {
-            video.pause();
-        }
         if (history.state && history.state.modalOpen) {
             history.back();
         }

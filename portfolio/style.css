@@ -144,8 +144,10 @@ body {
     font-size: 20px;
     text-decoration: none;
     transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px); /* ADDED: Frosted glass effect */
+    background-color: rgba(255, 255, 255, 0.7); 
+    /* ADDED: Frosted glass effect */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* ADDED: Subtle shadow for depth */
 }
 
@@ -393,68 +395,240 @@ body {
 
 .about-bio {
     max-width: 800px;
-    text-align: justify;
+    text-align: left;
 }
 
-.about-bio p {
+.about-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-points li {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
     font-size: 1rem;
     color: #555;
+    line-height: 1.6;
+}
+
+.about-points li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.about-points li strong {
+    color: #2b2b2b;
+    font-weight: 600;
 }
 
 /* ============================================= */
 /* SKILLS SECTION */
 /* ============================================= */
-.skills-layout {
+.skills-grid {
     width: 100%;
-    max-width: 100%;
+    margin: 0 auto;
     display: grid;
-    grid-template-areas:
-        "languages libraries"
-        "tools tools";
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    padding-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, 120px);
+    gap: 1rem 1rem;
+    justify-content: center;
+    justify-items: center;
+    padding: 0 1rem;
 }
-
-.skill-group.languages { grid-area: languages; }
-.skill-group.libraries { grid-area: libraries; }
-.skill-group.tools { grid-area: tools; }
-
-.skill-group {
+  
+.skill-item {
+    width: 120px;                /* smaller, more dense */
+    min-height: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.skill-group h3 {
     text-align: center;
-    margin-bottom: 25px;
+    padding: 16px 10px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+  
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(10, 102, 214, 0.1), rgba(3, 102, 214, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
+}
+  
+.skill-item i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    font-size: 32px;
+    color: #2d3748;
+    line-height: 1;
+    margin-bottom: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Brand colors for each skill icon - Updated order */
+/* 1. Python - Blue/Yellow */
+.skill-item:nth-child(1) i { 
+    background: linear-gradient(135deg, #3776ab 0%, #ffd43b 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(55, 118, 171, 0.3);
+}
+
+/* 2. NumPy - Blue/Green */
+.skill-item:nth-child(2) i { 
+    background: linear-gradient(135deg, #4d77cf 0%, #77b255 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(77, 119, 207, 0.3);
+}
+
+/* 3. Pandas - Red/Purple */
+.skill-item:nth-child(3) i { 
+    background: linear-gradient(135deg, #e70488 0%, #150458 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 4, 136, 0.3);
+}
+
+/* 4. Matplotlib - Blue */
+.skill-item:nth-child(4) i { 
+    background: linear-gradient(135deg, #11557c 0%, #1f77b4 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(17, 85, 124, 0.3);
+}
+
+/* 5. Seaborn - Purple */
+.skill-item:nth-child(5) i { 
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+/* 6. Scikit-learn - Orange */
+.skill-item:nth-child(6) i { 
+    background: linear-gradient(135deg, #f7931e 0%, #ff6b35 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(247, 147, 30, 0.3);
+}
+
+/* 7. TensorFlow - Orange */
+.skill-item:nth-child(7) i { 
+    background: linear-gradient(135deg, #ff6f00 0%, #ff8f00 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 111, 0, 0.3);
+}
+
+/* 8. PyTorch - Red */
+.skill-item:nth-child(8) i { 
+    background: linear-gradient(135deg, #ee4c2c 0%, #ff6b35 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(238, 76, 44, 0.3);
+}
+
+/* 9. SQL - Orange */
+.skill-item:nth-child(9) i { 
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* 10. R - Blue */
+.skill-item:nth-child(10) i { 
+    background: linear-gradient(135deg, #276dc3 0%, #1e4a72 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(39, 109, 195, 0.3);
+}
+
+/* 11. Julia - Purple/Green */
+.skill-item:nth-child(11) i { 
+    background: linear-gradient(135deg, #9558b2 0%, #389826 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(149, 88, 178, 0.3);
+}
+
+/* 12. Power BI - Yellow */
+.skill-item:nth-child(12) i { 
+    background: linear-gradient(135deg, #f2c811 0%, #ffb900 100%); 
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(242, 200, 17, 0.3);
+}
+
+/* 13. Excel - Green */
+.skill-item:nth-child(13) i { 
+    background: linear-gradient(135deg, #217346 0%, #1d6f42 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(33, 115, 70, 0.3);
+}
+
+/* 14. GitHub - Black */
+.skill-item:nth-child(14) i { 
+    background: linear-gradient(135deg, #333333 0%, #24292e 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+}
+
+/* 15. Git - Orange */
+.skill-item:nth-child(15) i { 
+    background: linear-gradient(135deg, #f05032 0%, #dd2c00 100%); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(240, 80, 50, 0.3);
+}
+
+/* 16. Hugging Face - Yellow */
+.skill-item:nth-child(16) i { 
+    background: linear-gradient(135deg, #ffd21e 0%, #ffb900 100%); 
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(255, 210, 30, 0.3);
+}
+  
+/* skill name */
+.skill-name {
+    font-size: 14px;
     font-weight: 600;
-    color: var(--dark-grey);
+    color: #0f1724;
+    letter-spacing: 0.05px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
 }
-
-.skill-group-image-1 {
-    height: 120px;
-    width: auto;
-    max-width: 100%;
-    display: inline-block;
-    transition: transform 0.3s ease;
+  
+.skill-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(10, 102, 214, 0.1), 
+                0 4px 8px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(10, 102, 214, 0.3);
 }
-
-.skill-group-image-1:hover {
-    transform: scale(1.05);
+  
+.skill-item:hover::before {
+    opacity: 1;
 }
-
-.skill-group-image-2 {
-    height: 60px;
-    width: auto;
-    max-width: 100%;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.skill-group-image-2:hover {
-    transform: scale(1.1);
+  
+.skill-item:hover i {
+    filter: brightness(1.1) saturate(1.2);
 }
 
 /* ============================================= */
@@ -495,6 +669,10 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.project-card .icon-normal {
+    background-color: #fff3e0;
+}
+
 .project-card .icon-brown {
     background-color: #f4ede4;
     color: #4e2a0e;
@@ -529,6 +707,13 @@ body {
 .project-card:hover .icon-purple {
     background-color: #8e24aa;
     color: #e7f3ff;
+}
+
+/* Style for images inside project icons */
+.project-card .project-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .project-card h3 {
@@ -604,6 +789,59 @@ body {
 .tech-badge:hover {
     background-color: var(--primary-color);
     color: #e7f3ff;
+}
+
+/* ============================================= */
+/* CERTIFICATES SECTION - simple image + caption */
+/* ============================================= */
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased minmax */
+    gap: 30px;
+    align-items: start;
+    margin-top: 16px;
+    width: 100%;
+    justify-items: center;
+    padding: 10px;
+}
+
+.cert-item {
+    background: transparent;
+    padding: 0;
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+}
+
+.cert-item a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.cert-item img {
+    width: auto;
+    height: 250px;
+    max-width: 100%; /* Ensure image doesn't overflow container */
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px 0 rgba(0,0,0,0.18), 0 4px 16px 0 rgba(16,24,40,0.16);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+    margin: 0 auto;
+}
+
+.cert-item figcaption {
+    padding: 16px 8px; /* Increased top padding */
+    margin-top: 5px; /* Added space between image and caption */
+}
+
+.cert-item a:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 20px 46px -4px rgba(0,42,95,0.32), 0 8px 36px -5px rgba(16,24,40,0.18);
+    border-color: var(--primary-color);
 }
 
 /* ============================================= */
@@ -1149,13 +1387,27 @@ body.modal-open {
         font-size: 1.2rem;
     }
 
-    .skills-layout {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "languages"
-            "libraries"
-            "tools";
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+        padding: 0 1.5rem;
+    }
+    
+    .skill-item {
         width: 100%;
+        min-height: 120px;
+        padding: 14px 8px;
+    }
+    
+    .skill-item i {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .skill-name {
+        font-size: 13px;
     }
 
     .award-description h3 {
@@ -1252,6 +1504,7 @@ body.modal-open {
         width: 100%;
         transform: none;
         background-color: rgba(255, 255, 255, 0.9);
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         padding: 10px 0;
         box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
@@ -1319,6 +1572,36 @@ body.modal-open {
     .current-position {
         font-size: 1.2rem;
         align-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 0.9rem;
+      }
+    
+    .skill-item {
+        width: 100%;
+        min-height: 110px;
+        padding: 12px 6px;
+    }
+    
+    .skill-item i {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+    
+    .skill-name {
+        font-size: 12.5px;
+    }
+
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .cert-item img {
+        height: 180px; /* Slightly smaller on mobile */
     }
 
     .award-container {

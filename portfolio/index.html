@@ -80,11 +80,13 @@
         <!-- ABOUT SECTION -->
         <!-- ============================================= -->
         <section id="about" class="section">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">About Me (Summary)</h2>
             <div class="about-bio">
-                <p>
-                    I am a recent (August 2025) <strong>Mathematics graduate</strong> from <strong>IPB University</strong>. During my studies, I participated in the national mathematics competition <strong>ONMIPA-PT 2024</strong> and earned an <strong>Honorable Mention</strong>.<br><br>I have completed several projects in <strong>statistics</strong> and <strong>machine learning</strong> using tools like <strong>Python</strong>, <strong>Julia</strong>, <strong>SQL</strong>, <strong>R</strong>, <strong>Power BI</strong>, and <strong>Git</strong>, which strengthened my skills in <strong>EDA</strong>, <strong>statistical modeling</strong>, <strong>machine learning</strong>, and <strong>data visualization</strong>. I learned <strong>machine learning fundamentals</strong> through <strong>courses at university</strong> and expanded my <strong>practical skills</strong> through <strong>books</strong> and <strong>YouTube courses</strong>, applying new techniques immediately in project work to solidify my understanding.
-                </p>
+                <ul class="about-points">
+                    <li>Experienced in designing <strong>machine learning</strong> systems, including <strong>recommendation systems, value predictors (regression/clustering),</strong> and <strong>text classifications.</strong></li>
+                    <li>Advanced in <strong>exploratory data analysis (data cleaning, transformation, visualization), machine learning/deep learning modeling, AI engineering (fine-tuning, prompt engineering, RAG),</strong> and <strong>database handling.</strong></li>
+                    <li>Ranked <strong>top-20</strong> in a <strong>national mathematics competition for college-level (ONMIPA-PT 2024)</strong>, competing against <strong>1200+</strong> participants nationwide.</li>
+                </ul>
             </div>
         </section>
 
@@ -95,6 +97,26 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-icon icon-purple">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Course Recommender System</h3>
+                    <span class="project-type">Independent Project</span>
+                    <p>A course recommender system performance comparison between using content-based and collaborative-filtering techniques.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scikit-Surprise</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">NumPy</span>
+                            <span class="tech-badge">Tensorflow</span>
+                            <span class="tech-badge">Matplotlib</span>
+                    </div>
+                    <!-- <button class="project-link" data-project-id="crs">
+                        <i class="fas fa-eye"></i> See Details
+                    </button> -->
+                </div>
+                <!-- Project Card 2 -->
                 <div class="project-card">
                     <div class="project-icon icon-brown">
                         <i class="fas fa-laptop-code"></i>
@@ -114,10 +136,10 @@
                         <i class="fas fa-eye"></i> See Details
                     </button>
                 </div>
-                <!-- Project Card 2 -->
+                <!-- Project Card 3 -->
                 <div class="project-card">
-                    <div class="project-icon icon-purple">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="project-icon icon-normal">
+                        <img src="assets/images/powerbi_logo.png" alt="Power BI Logo" />
                     </div>
                     <h3>Interactive Dashboard Projects</h3>
                     <span class="project-type">Independent Project</span>
@@ -131,7 +153,7 @@
                         <i class="fas fa-eye"></i> See Details
                     </button>
                 </div>
-                <!-- Project Card 3 -->
+                <!-- Project Card 4 -->
                 <div class="project-card">
                     <div class="project-icon icon-orange">
                         <i class="fas fa-utensils"></i>
@@ -141,13 +163,13 @@
                     <p>A personalized menu recommendation system for Solaria based on user ratings using machine learning.</p>
                     <div class="tech-skills">
                             <span class="tech-badge">Julia</span>
-                            <span class="tech-badge">Jupyter Notebook</span>
+                            <span class="tech-badge">SVD</span>
                     </div>
                     <button class="project-link" data-project-id="rs">
                         <i class="fas fa-eye"></i> See Details
                     </button>
                 </div>
-                <!-- Project Card 4 -->
+                <!-- Project Card 5 -->
                 <div class="project-card">
                     <div class="project-icon icon-red">
                         <i class="fas fa-heartbeat"></i>
@@ -158,7 +180,6 @@
                     <div class="tech-skills">
                             <span class="tech-badge">R</span>
                             <span class="tech-badge">RStudio</span>
-                            <span class="tech-badge">Excel</span>
                     </div>
                     <button class="project-link" data-project-id="le">
                         <i class="fas fa-eye"></i> See Details
@@ -172,19 +193,71 @@
         <!-- ============================================= -->
         <section id="skills" class="section">
             <h2 class="section-title">My Skills</h2>
-            <div class="skills-layout">
-                <div class="skill-group languages">
-                    <h3>Languages</h3>
-                    <img src="assets/images/languages-logo.png" alt="Language Skills" class="skill-group-image-1">
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-python"></i>
+                    <span class="skill-name">Python</span>
                 </div>
-                <div class="skill-group libraries">
-                    <h3>Libraries</h3>
-                    <img src="assets/images/libraries-logo.png" alt="Library Skills" class="skill-group-image-1">
+                <div class="skill-item">
+                    <i class="fas fa-cubes"></i>
+                    <span class="skill-name">NumPy</span>
                 </div>
-            </div>
-            <div class="skill-group tools">
-                    <h3>Tools</h3>
-                    <img src="assets/images/tools-logo.png" alt="Tool Skills" class="skill-group-image-2">
+                <div class="skill-item">
+                    <i class="fas fa-stream"></i>
+                    <span class="skill-name">Pandas</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="skill-name">Matplotlib</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-area"></i>
+                    <span class="skill-name">Seaborn</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-robot"></i>
+                    <span class="skill-name">Scikit-learn</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-brain"></i>
+                    <span class="skill-name">Tensorflow</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-fire"></i>
+                    <span class="skill-name">Pytorch</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span class="skill-name">SQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-r-project"></i>
+                    <span class="skill-name">R</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-gem"></i>
+                    <span class="skill-name">Julia</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span class="skill-name">Power BI</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-file-excel"></i>
+                    <span class="skill-name">Excel</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-github"></i>
+                    <span class="skill-name">GitHub</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-git-alt"></i>
+                    <span class="skill-name">Git</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-smile"></i>
+                    <span class="skill-name">Hugging Face</span>
+                </div>
             </div>
         </section>
 
@@ -220,6 +293,33 @@
         </section>
 
         <!-- ============================================= -->
+        <!-- CERTIFICATIONS SECTION -->
+        <!-- ============================================= -->
+        <section id="awards" class="section">
+            <h2 class="section-title">Certificates</h2>
+
+            <div class="certifications-grid">
+                <figure class="cert-item">
+                    <a href="https://coursera.org/verify/professional-cert/H15CNXCOCZY3" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/ml_cert.jpg" alt="Machine Learning Certificate">
+                        <figcaption>
+                            <strong>Machine Learning with Python & Scikit-learn</strong><br>IBM
+                        </figcaption>
+                    </a>
+                </figure>
+
+                <figure class="cert-item">
+                    <a href="https://coursera.org/verify/specialization/YHFC8TAN4Y5U" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/llmops_cert.jpg" alt="LLMOps">
+                        <figcaption>
+                            <strong>Large Language Model Operations (LLMOps)</strong><br>Duke University
+                        </figcaption>
+                    </a>
+                </figure>
+            </div>
+        </section>
+        
+        <!-- ============================================= -->
         <!-- AWARDS SECTION -->
         <!-- ============================================= -->
         <section id="awards" class="section">
@@ -230,7 +330,7 @@
                 </div>
                 <div class="award-description">
                     <h3>Honorable Mention in Mathematics at ONMIPA-PT 2024</h3>
-                    <p>Awarded an <strong>Honorable Mention</strong> (top 20) in <strong>Mathematics</strong> at <strong>ONMIPA-PT 2024</strong> (National Mathematics and Natural Sciences Olympiad for Higher Education), competing against <strong>1,000+</strong> participants nationwide.<br><br>Issued by Kemdikbudristek, Puspresnas, and BPTI.</p>
+                    <p>Awarded an <strong>Honorable Mention (top 20)</strong> in <strong>Mathematics</strong> at <strong>ONMIPA-PT 2024</strong> (National Mathematics and Natural Sciences Olympiad for Higher Education), competing against <strong>1,200+</strong> participants nationwide.<br><br>Issued by Kemdikbudristek, Puspresnas, and BPTI.</p>
                 </div>
             </div>
         </section>
@@ -324,7 +424,6 @@
                     <ul class="tools-list">
                         <li>R</li>
                         <li>RStudio</li>
-                        <li>Excel</li>
                     </ul>
                     <div class="project-links">
                         <a href="https://github.com/daffirds/life-expectancy/" target="_blank">
@@ -365,7 +464,7 @@
                     <li>Build, refine, and interpret <strong>multiple linear regression</strong> models with <strong>backward selection.</strong></li>
                     <li>Apply hypothesis testing (t-tests, F-tests) to evaluate model significance and reliability.</li>
                     <li>Diagnose and address key regression assumptions such as multicollinearity, homoskedasticity, normality of residuals, and autocorrelation.</li>
-                    <li>Use <strong>R</strong> and <strong>Excel</strong> to implement statistical modeling, run diagnostics, and create clear visualizations.</li>
+                    <li>Use <strong>R</strong> to implement statistical modeling, run diagnostics, and create clear visualizations.</li>
                 </ol>
             </div>
         </div>
@@ -385,7 +484,7 @@
                         <h4>Tools Used:</h4>
                         <ul class="tools-list">
                             <li>Julia</li>
-                            <li>Jupyter Notebook</li>
+                            <li>SVD</li>
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/daffirds/solaria-menu-recommendation/" target="_blank">
