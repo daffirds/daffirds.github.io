@@ -415,17 +415,17 @@ body {
 }
 
 .about-points li::before {
-    content: "•";
+    content: "▶";
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0.2rem;
 }
 
 .about-points li strong {
-    color: #2b2b2b;
+    color: #1a365d;
     font-weight: 600;
 }
 
@@ -646,7 +646,7 @@ body {
     background-color: white;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -655,7 +655,7 @@ body {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .project-card .project-icon {
