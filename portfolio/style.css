@@ -674,6 +674,24 @@ body {
     background-color: #fff3e0;
 }
 
+.project-card .icon-blue {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+.project-card:hover .icon-blue {
+    background-color: #1976d2;
+    color: #e3f2fd;
+}
+
+.project-card .icon-green {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+.project-card:hover .icon-green {
+    background-color: #388e3c;
+    color: #e8f5e9;
+}
+
 .project-card .icon-brown {
     background-color: #f4ede4;
     color: #4e2a0e;
@@ -721,21 +739,6 @@ body {
     font-size: 1.4rem;
     margin-bottom: 10px;
     color: var(--dark-grey);
-}
-
-.project-type {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 12px rgba(0,123,255,0.10);
-    border: 1px solid #e7f3ff;
-    background: rgba(227,252,236,0.7); /* Soft green overlay */
-    color: #00695c;
-    border-color: #b2f7ef;
 }
 
 .project-card p {
@@ -1110,24 +1113,6 @@ body.modal-open {
     color: #333;
 }
 
-.modal-project-type {
-    display: inline-block;
-    padding: 6px 14px; /* a bit larger */
-    border-radius: 8px; /* less rounded */
-    font-size: 0.9rem; /* slightly bigger text */
-    font-weight: 600;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 12px rgba(0,123,255,0.15);
-    border: 1px solid #cce5ff;
-    background: rgba(0, 123, 255, 0.15);  /* soft blue overlay */
-    color: #004085; /* dark blue text */
-    text-align: left; /* align left */
-    width: fit-content;
-}
-
-
-
 .project-info .simple-desc {
     font-size: 1rem;
     color: #666;
@@ -1145,8 +1130,8 @@ body.modal-open {
 }
 
 .tools-list li {
-    background-color: #eef2f7;
-    color: #556a85;
+    background-color: #e3f2fd;
+    color: #1565c0;
     padding: 5px 12px;
     border-radius: 15px;
     font-size: 0.85rem;
@@ -1155,7 +1140,7 @@ body.modal-open {
 }
 
 .tools-list li:hover {
-    background-color: var(--primary-color);
+    background-color: #1976d2;
     color: white;
 }
 
@@ -1434,11 +1419,6 @@ body.modal-open {
     }
 
     .project-info .simple-desc {
-        text-align: center;
-    }
-
-    .modal-project-type {
-        width: 100%;
         text-align: center;
     }
 

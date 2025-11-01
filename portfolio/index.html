@@ -16,6 +16,17 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9MCFWP9RL9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9MCFWP9RL9');
+</script>
+
 <body>
 
     <!-- ============================================= -->
@@ -83,7 +94,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-bio">
                 <ul class="about-points">
-                    <li>Experienced in designing <strong>machine learning</strong> systems, including <strong>recommendation systems, value predictors (regression/clustering),</strong> and <strong>text classifications.</strong></li>
+                    <li>Experienced in designing <strong>ML/AI</strong> systems, including <strong>recommendation systems, value predictors (regression/clustering), text classifications</strong> and <strong>AI Automation.</strong></li>
                     <li>Advanced in <strong>exploratory data analysis (data cleaning, transformation, visualization), machine learning/deep learning modeling, AI engineering (fine-tuning, prompt engineering, RAG),</strong> and <strong>database handling.</strong></li>
                     <li>Ranked <strong>top-20</strong> in a <strong>national mathematics competition for college-level (ONMIPA-PT 2024)</strong>, competing against <strong>1200+</strong> participants nationwide.</li>
                 </ul>
@@ -98,11 +109,26 @@
             <div class="projects-grid">
                 <!-- Project Card 1 -->
                 <div class="project-card">
+                    <div class="project-icon icon-blue">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Human Resources Data Entry and Checking Automation System</h3>
+                    <p>A system that automates the data entry and checking process for human resources data.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">OpenAI API</span>
+                            <span class="tech-badge">Google Spreadsheet API</span>
+                    </div>
+                    <button class="project-link" data-project-id="hr">
+                        <i class="fas fa-eye"></i> See Details
+                    </button>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card">
                     <div class="project-icon icon-purple">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3>Semantic Course Recommender System</h3>
-                    <span class="project-type">Independent Project</span>
                     <p>A course recommender system performance comparison between using content-based and collaborative-filtering techniques.</p>
                     <div class="tech-skills">
                             <span class="tech-badge">Python</span>
@@ -116,13 +142,12 @@
                         <i class="fas fa-eye"></i> See Details
                     </button> -->
                 </div>
-                <!-- Project Card 2 -->
+                <!-- Project Card 3 -->
                 <div class="project-card">
                     <div class="project-icon icon-brown">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>System Logs Classification</h3>
-                    <span class="project-type">Independent Project</span>
                     <p>A system logs classification using hybrid approach (BERT + LLM) to optimize efficiency.</p>
                     <div class="tech-skills">
                             <span class="tech-badge">Python</span>
@@ -136,13 +161,12 @@
                         <i class="fas fa-eye"></i> See Details
                     </button>
                 </div>
-                <!-- Project Card 3 -->
+                <!-- Project Card 4 -->
                 <div class="project-card">
                     <div class="project-icon icon-normal">
                         <img src="assets/images/powerbi_logo.png" alt="Power BI Logo" />
                     </div>
                     <h3>Interactive Dashboard Projects</h3>
-                    <span class="project-type">Independent Project</span>
                     <p>A series of projects focused on visualizing complex datasets into interactive dashboards.</p>
                     <div class="tech-skills">
                             <span class="tech-badge">Power BI</span>
@@ -153,13 +177,29 @@
                         <i class="fas fa-eye"></i> See Details
                     </button>
                 </div>
-                <!-- Project Card 4 -->
+                <!-- Project Card 5 -->
+                <div class="project-card">
+                    <div class="project-icon icon-green">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Telegram Automated Chatbot for FnB Business</h3>
+                    <p>A telegram chatbot that answers customer questions about stocks and products automatically.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">AI Agent</span>
+                            <span class="tech-badge">Telegram API</span>
+                            <span class="tech-badge">Qdrant</span>
+                    </div>
+                    <button class="project-link" data-project-id="tele">
+                        <i class="fas fa-eye"></i> See Details
+                    </button>
+                </div>
+                <!-- Project Card 6 -->
                 <div class="project-card">
                     <div class="project-icon icon-orange">
                         <i class="fas fa-utensils"></i>
                     </div>
                     <h3>Solaria Personalized Menu Recommendation System</h3>
-                    <span class="project-type">Team Project</span>
                     <p>A personalized menu recommendation system for Solaria based on user ratings using machine learning.</p>
                     <div class="tech-skills">
                             <span class="tech-badge">Julia</span>
@@ -169,13 +209,12 @@
                         <i class="fas fa-eye"></i> See Details
                     </button>
                 </div>
-                <!-- Project Card 5 -->
+                <!-- Project Card 7 -->
                 <div class="project-card">
                     <div class="project-icon icon-red">
                         <i class="fas fa-heartbeat"></i>
                     </div>
                     <h3>Life Expectancy Regression Analysis</h3>
-                    <span class="project-type">Team Project</span>
                     <p>A statistical analysis exploring the relationship between life expectancy and various socio-economic factors using multiple linear regression.</p>
                     <div class="tech-skills">
                             <span class="tech-badge">R</span>
@@ -416,7 +455,6 @@
             <div class="modal-grid">
                 <div class="project-info">
                     <h3>Life Expectancy Regression Analysis</h3>
-                    <span class="modal-project-type">Team Project</span>
                     <p class="simple-desc">
                         A statistical analysis exploring the relationship between life expectancy and various socio-economic factors using multiple linear regression.
                     </p>
@@ -477,7 +515,6 @@
                 <div class="modal-grid">
                     <div class="project-info">
                         <h3>Solaria Personalized Menu Recommendation System</h3>
-                        <span class="modal-project-type">Team Project</span>
                         <p class="simple-desc">
                             A personalized menu recommendation system for Solaria based on user ratings using machine learning.
                         </p>       
@@ -543,7 +580,6 @@
                 <div class="modal-grid">
                     <div class="project-info">
                         <h3>Interactive Dashboard Projects</h3>
-                        <span class="modal-project-type">Independent Project</span>
                         <p class="simple-desc">
                             A solo projects focused on learning how to use data visualization tools to transform datasets into clear and interactive dashboards.
                         </p>
@@ -567,15 +603,15 @@
                             <div class="slider-container">
                                 <div class="slide">
                                     <video loop muted>
-                                        <source src="https://raw.githubusercontent.com/daffirds/data-analyst-portfolio/main/interactive-dashboards/walmart-sales-analysis/interactive-demonstration.mp4" type="video/mp4">
+                                        <source src="https://raw.githubusercontent.com/daffirds/data-analyst-portfolio/main/interactive-dashboards/walmart-sales-analysis/interactive-demonstration.mp4" type="video/mp4" title="Walmart Sales Analysis Dashboard">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
                             </div>
-                            <div class="slider-nav">
+                            <!-- <div class="slider-nav">
                                 <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
                                 <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-                            </div>
+                            </div> -->
                         </div>
                         <p class="image-caption"></p>
                     </div>
@@ -601,7 +637,6 @@
                 <div class="modal-grid">
                     <div class="project-info">
                         <h3>System Logs Classification</h3>
-                        <span class="modal-project-type">Independent Project</span>
                         <p class="simple-desc">
                             A system logs classification using hybrid approach (BERT + LLM) to optimize efficiency.
                         </p>       
@@ -655,6 +690,105 @@
             </div>
         </div>
     </div>
+
+    <!-- MODAL 5: TELEGRAM CHATBOT -->
+    <div id="tele-modal" class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close-btn" title="Close"><i class="fas fa-times"></i></button>
+                <div class="modal-grid">
+                    <div class="project-info">
+                        <h3>Telegram Automated Chatbot for FnB Business</h3>
+                        <p class="simple-desc">
+                            A telegram chatbot that answers customer questions about stocks and products automatically.
+                        </p>       
+                        <h4>Tools Used:</h4>
+                        <ul class="tools-list">
+                            <li>n8n</li>
+                            <li>AI Agent</li>
+                            <li>Telegram Bot API</li>
+                            <li>Qdrant</li>
+                        </ul>
+                    </div>
+
+                    <div class="image-slider">
+                        <div class="slider-visual-wrapper">
+                            <div class="slider-container">
+                                <div class="slide">
+                                    <img src="assets/images/tele-pipe.png" alt="Flowchart">
+                                </div>
+                            </div>
+                            <!-- <div class="slider-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div> -->
+                        </div>
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+
+                <div class="detailed-explanation">
+                    <h4>Project Overview</h4>
+                    <p>
+                        Developed an <strong>automated Telegram chatbot</strong> using <strong>n8n</strong> to help manage customer inquiries in a FnB business.
+                    <br><br>Key Features:
+                    </p>
+                    <ol>
+                        <li>Automated chat answers to give <strong>instant responses</strong> to customer query.</li>
+                        <li>Product and stock <strong>API integration</strong> to provide accurate information</li>
+                        <li>Giving <strong>friendly</strong> conversation flow.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 6: DATA ENTRY & CHECKING AUTOMATION -->
+    <div id="hr-modal" class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close-btn" title="Close"><i class="fas fa-times"></i></button>
+                <div class="modal-grid">
+                    <div class="project-info">
+                        <h3>Human Resources Data Entry and Checking Automation System</h3>
+                        <p class="simple-desc">
+                            A system that automates the data entry and checking process for human resources data.
+                        </p>       
+                        <h4>Tools Used:</h4>
+                        <ul class="tools-list">
+                            <li>n8n</li>
+                            <li>OpenAI API</li>
+                            <li>Google Spreadsheet API</li>
+                        </ul>
+                    </div>
+
+                    <div class="image-slider">
+                        <div class="slider-visual-wrapper">
+                            <div class="slider-container">
+                                <div class="slide">
+                                    <img src="assets/images/hr-1.png" alt="n8n pipeline">
+                                </div>
+                                <div class="slide">
+                                    <img src="assets/images/hr-2.png" alt="n8n pipeline 2">
+                                </div>
+                            </div>
+                            <div class="slider-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <p class="image-caption"></p>
+                    </div>
+                </div>
+
+                <div class="detailed-explanation">
+                    <h4>Project Overview</h4>
+                    <p>
+                        Built a system that automates <strong>90%</strong> of <strong>data entry</strong> and <strong>data validation</strong> process about human resources data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Local JS -->
     <script src="script.js"></script>
 

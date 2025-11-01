@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // === ANIMATED TEXT FOR CURRENT POSITION (MOVED HERE) ===
         const texts = [
             "Data Scientist",
-            "AI Enthusiast"
+            "Agentic AI Engineer"
         ];
 
         const wrapper = document.querySelector(".position-text-wrapper");
@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
 
             if (pageYOffset >= sectionTop - window.innerHeight / 4) {
                 current = section.getAttribute('id');
