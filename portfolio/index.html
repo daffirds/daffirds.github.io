@@ -107,6 +107,42 @@
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
+                <!-- Project Card: Staffinc Owl -->
+                <div class="project-card">
+                    <div class="project-icon icon-blue">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Staffinc Owl</h3>
+                    <p>A web app to analyze messy interview notes and feedback into a visualized dashboard for easy analysis. Delivered MVP in a week.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">AWS Lambda</span>
+                            <span class="tech-badge">OpenAI API</span>
+                            <span class="tech-badge">Recharts</span>
+                    </div>
+                    <button class="project-link" data-project-id="owl">
+                        <i class="fas fa-eye"></i> See Details
+                    </button>
+                </div>
+                <!-- Project Card: Staffinc Santa -->
+                <div class="project-card">
+                    <div class="project-icon icon-green">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Staffinc Santa</h3>
+                    <p>An internal data validation platform enabling non-technical teams to automate repetitive validation workflows independently. Shipped MVP in a month.</p>
+                    <div class="tech-skills">
+                            <span class="tech-badge">React (Vite)</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">AWS Lambda</span>
+                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">Supabase</span>
+                    </div>
+                    <button class="project-link" data-project-id="santa">
+                        <i class="fas fa-eye"></i> See Details
+                    </button>
+                </div>
                 <!-- Project Card 1 -->
                 <div class="project-card">
                     <div class="project-icon icon-blue">
@@ -305,6 +341,14 @@
         <!-- ============================================= -->
         <section id="experience" class="section">
             <h2 class="section-title">Experiences</h2>
+            <div class="experience-item">
+                <h3>AI Automation Engineer Intern</h3>
+                <p class="experience-details">Staffinc Group - Internship<br>Nov 2025 - Feb 2026</p>
+                <ul>
+                    <li>Developed an internal data validation web platform from scratch using React (Vite) for frontend and Node.js microservices on AWS Lambda for backend, enabling non-technical teams to automate repetitive document validation workflows independently. Shipped MVP in a month.</li>
+                    <li>Built automation workflows using n8n to streamline repetitive data entry/data validation tasks, reducing manual work by about 26 hours per month.</li>
+                </ul>
+            </div>
             <div class="experience-item">
                 <h3>AI Agent Trainer</h3>
                 <p class="experience-details">SoftAge Information Technology Limited - Freelance<br>Aug 2025 - Present</p>
@@ -783,6 +827,83 @@
                     <h4>Project Overview</h4>
                     <p>
                         Built a system that automates <strong>90%</strong> of <strong>data entry</strong> and <strong>data validation</strong> process about human resources data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: STAFFINC OWL -->
+    <div id="owl-modal" class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close-btn" title="Close"><i class="fas fa-times"></i></button>
+                <div class="modal-grid">
+                    <div class="project-info">
+                        <h3>Staffinc Owl</h3>
+                        <p class="simple-desc">
+                            A web application that analyzes messy interview notes and feedback into a visualized dashboard for easy analysis.
+                        </p>
+                        <h4>Tools Used:</h4>
+                        <ul class="tools-list">
+                            <li>AWS Lambda</li>
+                            <li>RDS</li>
+                            <li>API Gateway</li>
+                            <li>Amplify</li>
+                            <li>OpenAI API</li>
+                            <li>Vite</li>
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>shadcn/ui</li>
+                            <li>Tailwind CSS</li>
+                            <li>React Router</li>
+                            <li>TanStack Query</li>
+                            <li>Recharts</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/daffirds/staffinc-owl" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detailed-explanation">
+                    <h4>Project Overview</h4>
+                    <p>
+                        Delivered MVP in a week. Transforms unstructured interview notes and feedback into structured, visual insights through an interactive dashboard, making it easy for hiring teams to analyze candidate evaluations at a glance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: STAFFINC SANTA -->
+    <div id="santa-modal" class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close-btn" title="Close"><i class="fas fa-times"></i></button>
+                <div class="modal-grid">
+                    <div class="project-info">
+                        <h3>Staffinc Santa</h3>
+                        <p class="simple-desc">
+                            An internal data validation web platform enabling non-technical teams to automate repetitive validation workflows independently.
+                        </p>
+                        <h4>Tools Used:</h4>
+                        <ul class="tools-list">
+                            <li>React (Vite)</li>
+                            <li>Node.js</li>
+                            <li>AWS Lambda</li>
+                            <li>AWS Step Functions</li>
+                            <li>S3</li>
+                            <li>n8n</li>
+                            <li>Supabase</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="detailed-explanation">
+                    <h4>Project Overview</h4>
+                    <p>
+                        Shipped MVP in a month. Built from scratch with React (Vite) for the frontend and Node.js microservices on AWS Lambda for the backend, enabling non-technical teams to automate repetitive document validation workflows independently.
                     </p>
                 </div>
             </div>
