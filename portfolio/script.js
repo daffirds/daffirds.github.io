@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // === ANIMATED TEXT FOR CURRENT POSITION (MOVED HERE) ===
         const texts = [
-            "Data Scientist",
-            "Agentic AI Engineer"
+            "AI Product Engineer",
+            "Automation Engineer"
         ];
 
         const wrapper = document.querySelector(".position-text-wrapper");
